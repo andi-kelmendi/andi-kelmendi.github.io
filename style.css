@@ -6,6 +6,11 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+
+body {
+    background-color: #212121;
+}
+
 /***************************** partie 1 *******************************/
 
 
@@ -14,9 +19,9 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 80px;
+    width: 260px;
     height: 100%;
-    background: purple;
+    background: #272727;
     padding: 6px 14px;
     transition: .5s;
 }
@@ -28,27 +33,21 @@
 .sidebar .logo-menu {
     display: flex;
     align-items: center;
+    justify-content: center;
     width: 100%;
     height: 70px;
 }
 
-.sidebar .logo-menu .logo {
+.sidebar .logo {
     font-size: 25px;
-    color: #fff;
+    color: white;
+    font-weight: bold;
     pointer-events: none;
-    opacity: 0;
-    transition: .3s;
-}
-
-.sidebar.active .logo-menu .logo {
-    opacity: 1;
-    transition-delay: .2s;
 }
 
 .sidebar .logo-menu .toggle-btn {
     position: absolute;
     left: 50%;
-    transform: translateX(-50%);
     width: 40px;
     height: 40px;
     font-size: 22px;
@@ -57,10 +56,6 @@
     line-height: 40px;
     cursor: pointer;
     transition: .5s;
-}
-
-@media screen and (min-width : 320px){
-    
 }
 
 .sidebar.active .logo-menu .toggle-btn {
@@ -102,23 +97,9 @@
     line-height: 50px;
 }
 
-.sidebar .link-name {
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity .3s;
-}
-
-.sidebar.active .link-name {
-    opacity: 1;
-    pointer-events: auto;
-    transition-delay: calc(.1s * var(--i));
-}
-
-
-/* partie ecriture */
-
 .card {
     padding-left: 280px;
     padding-top: 20px;
+    color: white;
 }
 

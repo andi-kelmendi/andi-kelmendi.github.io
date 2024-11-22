@@ -1,11 +1,11 @@
-// PARTIE page ecriture pour le site
+// // PARTIE page ecriture pour le site
 
-const sidebar = document.querySelector('.sidebar');
-const toggleBtn = document.querySelector('.toggle-btn');
+// const sidebar = document.querySelector('.sidebar');
+// const toggleBtn = document.querySelector('.toggle-btn');
 
-toggleBtn.addEventListener('click', () => {
-    sidebar.classList.toggle('active');
-})
+// toggleBtn.addEventListener('click', () => {
+//     sidebar.classList.toggle('active');
+// })
 
 
 
