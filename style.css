@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Advent+Pro|Dancing+Script&display=swap');
 
-/***************************** partie 1 *******************************/
+/***************************** Styles Globaux *******************************/
 * {
     margin: 0;
     padding: 0;
@@ -9,78 +9,96 @@
 }
 
 body {
-    min-height: 100vh;
-    background: url('265598-illustration-de-paysage-violet-vector-vectoriel.png') no-repeat;
-    background-size: cover;
-    background-position: center;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow-x: hidden;
+    background-color: blue;
 }
 
-.sidebar {
+/***************************** Navbar *******************************/
+.navbar {
+    width: 250px;
+    background-color: #272727;
+    color: white;
+    padding: 20px;
     position: fixed;
     top: 0;
     left: 0;
-    width: 200px;
     height: 100%;
-    background: gray;
-    padding: 6px 14px;
+    display: flex;
+    flex-direction: column;
 }
 
-.sidebar .logo-menu {
+.navbar .logo-menu {
+    margin-bottom: 30px;
+}
+
+.navbar .logo {
+    font-size: 35px;
+    font-weight: 700;
+    color: white;
+}
+
+.navbar a {
     display: flex;
     align-items: center;
-    width: 100%;
-    height: 70px;
-}
-
-.sidebar .logo-menu .logo {
-    font-size: 25px;
-    color: #fff;
-    pointer-events: none;
-}
-
-.sidebar .logo-menu .toggle-btn {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 40px;
-    height: 40px;
-    font-size: 22px;
-    color: #fff;
-    text-align: center;
-    line-height: 40px;
-    cursor: pointer;
-    transition: .5s;
-}
-
-.sidebar.active .logo-menu .toggle-btn {
-    left: 90%;
-}
-
-.sidebar .list {
-    margin-top: 10px;
-}
-
-.list .list-item {
-    list-style: none;
-    width: 100%;
-    height: 50px;
-    margin: 5px 0;
-    line-height: 50px;
-}
-
-.list .list-item a {
-    display: flex;
-    align-items: center;
-    font-size: 18px;
-    color: #fff;
+    color: white;
     text-decoration: none;
-    border-radius: 6px;
-    white-space: nowrap;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: left;
 }
 
-.list .list-item a i {
-    min-width: 50px;
-    height: 50px;
-    text-align: center;
-    line-height: 50px;
+.navbar a i {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.navbar a:hover {
+    background-color: blue;
+}
+
+/***************************** Responsive Styles *******************************/
+@media (max-width: 420px) {
+    .navbar {
+        width: 100%;
+        height: 75px;
+        bottom: 0;
+        left: 0;
+        top: unset;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        padding: 0;
+    }
+
+    .navbar a {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 5px;
+        flex: 1;
+        text-align: center;
+    }
+
+    .navbar a i {
+        margin: 0;
+        font-size: 24px;
+    }
+
+    .navbar a span {
+        font-size: 12px;
+        margin-top: 5px;
+    }
+
+
+
+    .logo-menu {
+        display: none;
+    }
 }
