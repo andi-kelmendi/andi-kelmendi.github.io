@@ -19,15 +19,10 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    width: 80px;
+    width: 200px;
     height: 100%;
     background: gray;
     padding: 6px 14px;
-    transition: .5s;
-}
-
-.sidebar.active {
-    width: 260px;
 }
 
 .sidebar .logo-menu {
@@ -41,13 +36,6 @@ body {
     font-size: 25px;
     color: #fff;
     pointer-events: none;
-    opacity: 0;
-    transition: .3s;
-}
-
-.sidebar.active .logo-menu .logo {
-    opacity: 1;
-    transition-delay: .2s;
 }
 
 .sidebar .logo-menu .toggle-btn {
@@ -88,12 +76,6 @@ body {
     text-decoration: none;
     border-radius: 6px;
     white-space: nowrap;
-    transition: .5s;
-}
-
-.list .list-item.active a,
-.list .list-item a:hover {
-    background: rgb(255, 255, 255, .2);
 }
 
 .list .list-item a i {
@@ -101,16 +83,4 @@ body {
     height: 50px;
     text-align: center;
     line-height: 50px;
-}
-
-.sidebar .link-name {
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity .3s;
-}
-
-.sidebar.active .link-name {
-    opacity: 1;
-    pointer-events: auto;
-    transition-delay: calc(.1s * var(--i));
 }
